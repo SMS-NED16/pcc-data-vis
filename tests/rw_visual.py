@@ -8,6 +8,9 @@ data_points = 5 * (10 ** 5)
 rw = RandomWalk(data_points)
 rw.fill_walk()
 
+#Set the size of the plotting window
+plt.figure(figsize=(10, 6), dpi=128) #10 inches by 6 inches
+
 #Apply color map to scatter plot to show direction of random walk
 point_numbers = list(range(rw.num_points))
 plt.scatter(rw.x_values, rw.y_values, c=point_numbers, 
