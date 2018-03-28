@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 
 #Make a RandomWalk object and populate it with values
-data_points = 5 * (10 ** 5)
+data_points = 5 * (10 ** 4)
 
 rw = RandomWalk(data_points)
 rw.fill_walk()
