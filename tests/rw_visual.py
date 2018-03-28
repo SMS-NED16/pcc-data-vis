@@ -3,13 +3,15 @@ import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 
 #Make a RandomWalk object and populate it with values
-rw = RandomWalk()
+data_points = 5 * (10 ** 5)
+
+rw = RandomWalk(data_points)
 rw.fill_walk()
 
 #Apply color map to scatter plot to show direction of random walk
 point_numbers = list(range(rw.num_points))
 plt.scatter(rw.x_values, rw.y_values, c=point_numbers, 
-	cmap=plt.cm.Blues, edgecolor='none', s=15)
+	cmap=plt.cm.Blues, edgecolor='none', s=1)
 
 #Emphasize the first and last points
 plt.scatter(0, 0, c='green', edgecolor='none', s=100)	#first point
